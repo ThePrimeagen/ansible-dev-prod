@@ -1,0 +1,16 @@
+- name: Install Node
+  apt:
+    name: ['nodejs', 'npm']
+    update_cache: true
+  tags:
+   - node
+- name: N node manager
+  npm:
+    name: n
+    global: yes
+  tags:
+   - node
+- name: Install node version 14
+  shell: n 14
+  tags:
+   - node
